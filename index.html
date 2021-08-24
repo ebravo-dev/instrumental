@@ -14,31 +14,65 @@
     <link rel="stylesheet" href="assets/css/untitled.css">
 </head>
 
-<body>
-    <nav class="navbar fixed-top ">
+<body class="bbc">
 
-        <div style="width: 100%;">
-            <!-- <div class="heap-line"></div> -->
+    <div style="width: 100%; position: fixed; top: 0; z-index: 11;">
+        <div class="heap-line "></div>
+        <div style="display: flex;">
+            <div class="nv ps-5 pe-5" style="width: 1000vh; height: 90px; display: flex; ">
+                <img class="nbiconmin pt-3 pb-3" src="assets/img/logo2.svg" alt="" style="color: red;">
+                <img class="nbiconmax pt-3 pb-3" src="assets/img/logo1.svg" alt="">
 
-            <div class="row">
-                <div class="col nv">
-                    <div class="pt-3 ps-4">Logo</div>
+                <div class="nbuttons tpc">
+                    <a href="/pages/about/"><span>¿Quiénes somos?</span></a>
+                    <a href="/pages/services/"><span>Nuestros servicios</span></a>
+                    <a href="/pages/contact/"><span>Contacto</span></a>
                 </div>
-                <div class="" style="width: 106px; ">
-                    <div class="menu-btn">
-                        <div class="menu-btn__burger"></div>
-                    </div>
+            </div>
+            <div class="pc navbutton" style="width: 106px;">
+                <div class="menu-btn ">
+                    <div class="menu-btn__burger"></div>
                 </div>
             </div>
         </div>
-    </nav>
-    <main id="cuerpo" class="cuerpo overlay pc">
-        <ul class="list-group pt-4">
-            <li class="list-group-item pc border-0 twc p-4 fs-2"><span>¿Quiénes somos?</span></li>
-            <li class="list-group-item pc border-0 twc p-4 fs-2"><span>Nuestros servicios</span></li>
-            <li class="list-group-item pc border-0 twc p-4 fs-2"><span>Contacto</span></li>
-        </ul>
-    </main>
+        <main id="cuerpo" class="cuerpo pc dn add-scroll ">
+            <ul class="list-group fade-in-image">
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/about/">¿Quiénes
+                        somos?</a></li>
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/services/">Nuestros servicios</a>
+                </li>
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/contact/">Contacto</a></li>
+                <div style="height: 70vh;"></div>
+            </ul>
+        </main>
+    </div>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <div style="width: 100%;  overflow: hidden; ">
+
+                    <img src="assets/img/2.jpg" width="100%">
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <div style="width: 100%;  overflow: hidden;">
+
+                    <img src="assets/img/1.jpg" width="100% ">
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <div style="width: 100%;  overflow: hidden;">
+
+                    <img src="assets/img/3.jpg" width="100% ">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src=" assets/img/3.jpg" width="100%">
+    <img src="assets/img/1.jpg" width="100%">
+    <img src="assets/img/2.jpg" width="100%">
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>

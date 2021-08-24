@@ -1,15 +1,126 @@
 :root {
   --cprimaryColor: #113f6c;
-  --cnavbarColor: #d6d6d6;
-  --ctextWhiteColor: #fff;
+  --cnavbarColor: rgba(204,204,204,0.8);
+  --coverallWhiteColor: #f2f2f2;
+}
+
+.navbutton{
+  display: none;
+}
+
+
+
+.nbuttons span{
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display:table-cell;
+  vertical-align: middle;
+  height: 90px;
+  font-weight: 600;
+  font-size: 18pt;
+
+  /* padding-bottom: 1px; */
+}
+
+.nbuttons{
+    font-size: 0;
+    width: 100%; 
+    text-align: right; 
+}
+
+.nbiconmin{
+  display: none;
+}
+
+@media (max-width: 430.98px) { 
+  .nbiconmax{
+    display: none;
+  }
+  .nbiconmin{
+    display: block;
+  }
+}
+
+@media (max-width: 1087.98px) { .navbutton{
+  display: block;
+}
+.heap-line{
+  display: none;
+}
+.nbuttons{
+  display: none;
+}
+
+
+}
+
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover{
+  text-decoration: inherit;
+  color: inherit;
+}
+
+.nb{
+  width: 100%;
+}
+
+.fade-in-image {
+  animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-moz-keyframes fadein { /* Firefox */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+@-o-keyframes fadein { /* Opera */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
 .pc {
   background-color: var(--cprimaryColor);
 }
 
+.tpc{
+  color: var(--cprimaryColor);
+}
+
 .twc {
-  color: var(--ctextWhiteColor);
+  color: var(--coverallWhiteColor);
+}
+
+.bbc{
+  background-color: var(--coverallWhiteColor);
 }
 
 .nv {
@@ -17,9 +128,10 @@
 }
 
 .heap-line {
-  height: 5px;
+  height: 8px;
   width: 100%;
   background-color: var(--cprimaryColor);
+  
 }
 
 .list-group {
@@ -28,19 +140,28 @@
 
 .navbar {
   padding: 0px;
+  
 }
 
 #cuerpo {
   width: 100%;
   height: 100vh;
-  z-index: 99999;
-  padding-top: 90px;
+  
+  padding-top: 20px;
+  margin: 0;
 }
 
-/* OverflowHidden */
 
 .oh {
   overflow: hidden;
+}
+
+.dn{
+  display: none;
+}
+
+.add-scroll{
+  overflow-y: scroll;
 }
 
 .menu-btn {
@@ -48,8 +169,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 55px;
+  width: 110px;
+  height: 90px;
   cursor: pointer;
   transition: all .15s ease-in-out;
 }
