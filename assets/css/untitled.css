@@ -4,6 +4,17 @@
   --coverallWhiteColor: #f2f2f2;
 }
 
+@font-face {
+  font-family: 'muli';
+  src: url('../fonts/muli/Muli.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
+}
+
+html *{
+  font-family: 'muli';
+}
+
 .navbutton{
   display: none;
 }
@@ -15,9 +26,9 @@
   padding-right: 3rem;
   display:table-cell;
   vertical-align: middle;
-  height: 90px;
+  height: 140px;
   font-weight: 600;
-  font-size: 18pt;
+  font-size: 24pt;
 
   /* padding-bottom: 1px; */
 }
@@ -30,29 +41,14 @@
 
 .nbiconmin{
   display: none;
+  cursor: pointer;
 }
 
-@media (max-width: 430.98px) { 
-  .nbiconmax{
-    display: none;
-  }
-  .nbiconmin{
-    display: block;
-  }
-}
-
-@media (max-width: 1087.98px) { .navbutton{
-  display: block;
-}
-.heap-line{
-  display: none;
-}
-.nbuttons{
-  display: none;
+.nbiconmax:hover{
+  cursor: pointer;
 }
 
 
-}
 
 a{
   color: inherit;
@@ -125,10 +121,14 @@ a:hover{
 
 .nv {
   background-color: var(--cnavbarColor);
+  width: 100%; 
+  height: 136px; 
+  display: flex; 
+  transition: all .15s ease-in-out;
 }
 
 .heap-line {
-  height: 8px;
+  height: 12px;
   width: 100%;
   background-color: var(--cprimaryColor);
   
@@ -169,8 +169,8 @@ a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110px;
-  height: 90px;
+  width: 160px;
+  height: 100px;
   cursor: pointer;
   transition: all .15s ease-in-out;
 }
@@ -190,8 +190,8 @@ a:hover{
 }
 
 .menu-btn__burger {
-  width: 26px;
-  height: 2px;
+  width: 42px;
+  height: 3px;
   background: #cccccc;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -201,8 +201,8 @@ a:hover{
 .menu-btn__burger::before, .menu-btn__burger::after {
   content: '';
   position: absolute;
-  width: 26px;
-  height: 2px;
+  width: 42px;
+  height: 3px;
   background: #cccccc;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(255,101,47,.2);
@@ -210,11 +210,11 @@ a:hover{
 }
 
 .menu-btn__burger::before {
-  transform: translateY(-10px);
+  transform: translateY(-15px);
 }
 
 .menu-btn__burger::after {
-  transform: translateY(10px);
+  transform: translateY(15px);
 }
 
 /* ANIMATION */
@@ -233,3 +233,51 @@ a:hover{
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+@media (max-width: 1470.98px) { 
+  .navbutton{
+    display: block;
+  }
+  .heap-line{
+    display: none;
+  }
+  .nbuttons{
+    display: none;
+  }
+  .nv{
+    height: 100px ;
+  }
+}
+
+@media (max-width: 660.98px) { 
+  .nbiconmax{
+    display: none;
+  }
+  .nbiconmin{
+    display: block;
+  }
+
+  .nv{
+    height: 60px;
+  }
+
+  .menu-btn{
+    height: 60px;
+    width: 100px;
+  }
+
+  .menu-btn__burger::before {
+    transform: translateY(-10px);
+  }
+  
+  .menu-btn__burger::after {
+    transform: translateY(10px);
+  }
+
+  .menu-btn__burger{
+    width: 32px;
+  }
+
+  .menu-btn__burger::before, .menu-btn__burger::after{
+    width: 32px;
+  }
+}
