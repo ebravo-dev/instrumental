@@ -233,6 +233,24 @@ a:hover{
   transform: rotate(-45deg) translate(35px, 35px);
 }
 
+.img1 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+.img1 img {
+    transition: transform .5s;
+
+}
+.img1 img:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.5);
+    transform-origin: 50% 50%;
+}
+
 @media (max-width: 1470.98px) { 
   .navbutton{
     display: block;
