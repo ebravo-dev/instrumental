@@ -3,6 +3,7 @@ const menuBtn = document.querySelector('.menu-btn');
 const webBody = document.body;
 const menuOverlay = document.getElementById('cuerpo');
 const homeClick = document.getElementsByClassName('home-click');
+const navBar = document.getElementById('nav-bar');
 let menuOpen = false;
 
 function _openMenu() {
@@ -36,4 +37,12 @@ for (let index = 0; index < homeClick.length; index++) {
 
 window.addEventListener('resize', function (event) {
     _closeMenu();
+}, true);
+
+window.addEventListener('scroll', function (event) {
+    // if (window.scrollY > 0) {
+    //     navBar.classList.add('nvs');
+    // } else {
+    //     navBar.classList.remove('nvs');
+    // }
 }, true);

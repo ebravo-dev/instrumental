@@ -28,16 +28,16 @@ html *{
   display:table-cell;
   vertical-align: middle;
   height: 100px;
+  /* background-color: red; */
   font-weight: 600;
   font-size: 18pt;
 
-  /* padding-bottom: 1px; */
 }
 
 .nbuttons{
-    font-size: 0;
     width: 100%; 
     text-align: right; 
+    /* background-color: tomato; */
 }
 
 .nbiconmin{
@@ -128,8 +128,12 @@ a:hover{
   transition: all .15s ease-in-out;
 }
 
+.nvs{
+  height: 80px;
+}
+
 .heap-line {
-  height: 12px;
+  height: 8px;
   width: 100%;
   background-color: var(--cprimaryColor);
   
@@ -218,8 +222,6 @@ a:hover{
   transform: translateY(15px);
 }
 
-/* ANIMATION */
-
 .menu-btn.open .menu-btn__burger {
   transform: translateX(-50px);
   background: transparent;
@@ -235,17 +237,23 @@ a:hover{
 }
 
 .tfi{
-  position:absolute; 
-  /* top: 50%;  */
-  /* left: 50%; */
-  bottom: 10%;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  
   font-size: 32pt;
   color: var(--coverallWhiteColor);
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-weight: 600;
   display: flex;
+  width: 100%;
+  text-align: center;
   transition: all .7s ease-in-out;
+  
+}
+.tfi>span{
+  width: 100%;
 }
 
 .img1 {
@@ -271,12 +279,45 @@ a:hover{
 }
 
 .img1:hover > .tfi{
-  padding-bottom: 50px;
-  /* filter: brightness(40%); */
+  padding-bottom: 120px;
 }
 
 
-@media(max-width: 1370.98px){
+
+@media(max-width: 1200.98px){
+  
+  .img1{
+    
+    height: 50vh;
+    
+  }
+  .pc{
+    flex-direction: column;
+  }
+
+  .img1:hover > img{
+    -ms-transform: none;
+    -webkit-transform: none; 
+    transform: none;
+    transform-origin: none;
+    filter: none;
+}
+
+.img1:hover > .tfi{
+  padding-bottom: 0px;
+}
+}
+
+@media (max-width: 480.98px) {
+  .tfi{
+    font-size: 24pt;
+  }
+
+  .img1{
+    height: 100%;
+    
+  }
+
 
 }
 
