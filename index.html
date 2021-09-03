@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <meta name="theme-color" content="#052442">
+    <title>Instrumentación y Control de México</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
@@ -12,13 +13,17 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/untitled.css">
+
+
 </head>
 
 <body class="bbc">
 
     <div style="width: 100%; position: fixed; top: 0; z-index: 11; ">
-        <div class="heap-line "></div>
+
+        <div id="top-bar" class="heap-line " style="width: 100%; "></div>
         <div style="display: flex; ">
             <div id="nav-bar" class="nv ps-2 pe-2">
                 <img class="nbiconmin home-click" src="assets/img/ICM ICONO.svg" alt="">
@@ -26,13 +31,13 @@
 
                 <div class="nbuttons tpc">
                     <a href="/pages/about/">
-                        <span>¿Quiénes somos?</span>
+                        <span class="textb">¿Quiénes somos?</span>
                     </a>
                     <a href="/pages/services/">
-                        <span>Nuestros servicios</span>
+                        <span class="textb">Nuestros servicios</span>
                     </a>
                     <a href="/pages/contact/">
-                        <span>Contacto</span>
+                        <span class="textb">Contacto</span>
                     </a>
                 </div>
             </div>
@@ -49,56 +54,36 @@
                 <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/services/">Nuestros servicios</a>
                 </li>
                 <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/contact/">Contacto</a></li>
-                <!-- <div style="height: 70vh;"></div> -->
             </ul>
         </main>
     </div>
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
                 <div
-                    style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/2.jpg'); background-size: cover; background-position: 50% 50%;">
-
-                    <!-- <img src="assets/img/2.jpg" width="100%"> -->
-                </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Calidad</h2>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/2.jpg'); background-size: cover; background-position: 50% 50%; position: relative;">
+                    <div class="textbanner"><span>Calidad</span></div>
                 </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-                <div
-                    style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/3.jpg'); background-size: cover; background-position: 50% 50%;">
-
-                </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Profesionalismo</h2>
-                    <p>Some representative placeholder content for the first slide.</p>
-                </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
+            <div class="swiper-slide">
                 <div
                     style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/1.jpg'); background-size: cover; background-position: 50% 50%;">
-
+                    <div class="textbanner"><span>Profesionalismo</span></div>
                 </div>
-                <div class="carousel-caption d-none d-md-block">
-                    <h2>Servicio</h2>
-                    <p>Some representative placeholder content for the first slide.</p>
+            </div>
+            <div class="swiper-slide">
+                <div
+                    style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/3.jpg'); background-size: cover; background-position: 50% 50%;">
+                    <div class="textbanner"><span>Servicio</span></div>
                 </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 
-    <div style="display: flex; justify-content: center;" class="pc">
+    <div class="pc services">
         <div class="img1 " onclick="window.location='/';">
             <img src="assets/img/Instrumentacion-industrial.png" alt="" width="101%">
             <div class="tfi">
@@ -121,13 +106,117 @@
             </div>
         </div>
     </div>
-    <img src="assets/img/1.jpg" width="100%">
-    <img src="assets/img/2.jpg" width="100%">
-    <img src=" assets/img/3.jpg" width="100%">
+
+    <div class="courses">
+        <div
+            style="background-color: var(--bggColor); width: 90% ; height: 45%; position: absolute; top:58%; left:50%; transform: translate(-50%, -50%); ">
+
+        </div>
+        <div
+            style="border-right: 6px solid var(--footerColor); width: 44% ; height: 55%; position: absolute; top:58%; transform: translateY(-50%); ">
+            <span
+                style=" top:-4vw; left: 15%; position:relative; color: var(--cprimaryColor); font-size: 8vw; font-weight: 600;">Cursos</span>
+            <br>
+            <p
+                style="width: 100%; text-align: justify; line-height: 24px;
+            text-justify: inter-word; position:relative; top: -60px; color: var(--textColor);font-size: 14pt; padding-right: 2vw; padding-left: 8vw;">
+                Lorem
+                ipsum
+                dolor
+                sit amet,
+                consectetur adipiscing elit.
+                abcdefgqwer gravida facilisis aliquam.
+                Phasellus pulvinar interdum auctor. Aliquam id eros neque. Donec vitae rutrum elit. Maecenas imperdiet,
+                quam vel efficitur tempor, nibh lacus semper tortor, quis vestibulum leo sem eu sapien. Nam tortor est,
+                sodales in ex a, aliquet efficitur augue. Interdum et malesuada fames ac ante ipsum primis in
+                faucibus. Quisque condimentum diam nec ullamcorper placerat. Aliquam mauris lectus.
+            </p>
+            <p
+                style=" top:-3vw; width: 100%; text-align: right; padding-right: 1.6vw;  position:relative; color: var(--textColor); font-size: 16pt; font-weight: 600;">
+                Saber
+                más
+                <i class="fas fa-plus-circle" style=" padding-top: 18px; padding-right: 10px; font-size: 16pt;"></i>
+            </p>
+            <br>
+        </div>
+        <img src="assets/img/casco.jpg" height="70%" width="54%" alt=""
+            style="object-fit: cover; position: absolute; right: 0; top:20%">
+        <img src="assets/img/mapa.png" alt="" height="102%">
+    </div>
+
+    <footer class="container-fluid h-100 "
+        style="background-color: var(--footerColor); height: 20vh !important; position: relative;">
+        <div class="row h-100 justify-content-center;">
+            <div class="col-12 col-sm-1 text-end" style="height: 10vh;  margin:auto; font-size: 14pt; ">
+                <img src="assets/img/ICM LOGO BLANCO.svg" alt="" height="100%">
+            </div>
+            <div class="col-12 col-sm-7 text-center " style="margin:auto; color: var(--coverallWhiteColor); ">
+                <div class="row h-100 ">
+                    <div class="col " style=" font-size: 14pt;">
+                        <p>Inicio</p>
+                    </div>
+                    <div class="col" style="font-size: 14pt;">
+                        <p>Nosotros</p>
+                    </div>
+                    <div class="col" style="font-size: 14pt;">
+                        <p>Servicios</p>
+                    </div>
+                    <div class="col" style="font-size: 14pt;">
+                        <p>Certificados</p>
+                    </div>
+                    <div class="col" style="font-size: 14pt;">
+                        <p>Contacto</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-1" style="padding-top: 40px; padding-bottom: 40px; ">
+                <div class="h-100" style="background-color: var(--coverallWhiteColor) ; width: 2px; margin:auto;">
+
+                </div>
+            </div>
+            <div class="col-12 col-sm-3 text-left h-100 " style=" font-size: 14pt; margin:auto; ">
+                <div class="row h-100" style="align-content: center;">
+                    <div class="col-sm-4" style="height: 10vh; margin:auto;">
+
+                        <img src="assets/img/ICM Fb.svg" alt="" height="100%">
+                    </div>
+                    <div class="col-sm-4" style="height: 10vh; margin:auto;">
+                        <img src="assets/img/ICM In.svg" alt="" height="100%">
+                        <!-- <img src="assets/img/ICM In.svg" alt="" height="20%"> -->
+                    </div>
+                    <div class="col-sm-4" style="height: 10vh; margin:auto;">
+                        <img src="assets/img/ICM Wp.svg" alt="" height="100%">
+                        <!-- <img src="assets/img/ICM Wp.svg" alt="" height="20%"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="position: absolute; bottom: 0; right: 50%; transform: translateX(50%); font-size: 12pt; color: var(--coverallWhiteColor);">
+            <p>Instrumentación y Control de México 2021 | By <a href="" style="color: #10a1b0;">Nextiart</a>.</p>
+        </div>
+    </footer>
+
+    <!-- <div class="container-fluid " style="background-color: var(--footerColor); ">
+        <div class="row h-100 justify-content-center;">
+            <div class="col-12 col-sm-12 text-left text-center"
+                style="  margin:auto; font-size: 12pt; color: var(--coverallWhiteColor); ">
+                <p>Instrumentación y Control de México 2021 | By <a href="" style="color: #10a1b0;">Nextiart</a>.</p>
+            </div>
+        </div>
+    </div> -->
+
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="assets/js/untitled.js"></script>
+
+
+    <script>
+
+    </script>
 </body>
 
 </html>
