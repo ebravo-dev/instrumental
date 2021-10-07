@@ -5,11 +5,26 @@
   --coverallWhiteColor: #f2f2f2;
   --footerColor: #333333;
   --textColor: #191919;
+  --wmColor: #10a1b0;
 }
 
 @font-face {
   font-family: 'muli';
   src: url('../fonts/muli/Muli.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: 'mulilight';
+  src: url('../fonts/muli/Muli-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-size: normal;
+}
+
+@font-face {
+  font-family: 'mulibold';
+  src: url('../fonts/muli/Muli-Bold.ttf') format('truetype');
   font-weight: normal;
   font-size: normal;
 }
@@ -24,6 +39,8 @@ html *{
 }
 
 
+
+
 .navbutton{
   display: none;
 }
@@ -34,9 +51,25 @@ html *{
 
 }
 
-.swiper-pagination-bullet {
-  background: #fff;
+.swiper-pagination-label{
+  font-family: 'mulibold'; font-weight: 900;
+  font-size: 72pt;
+  position: absolute;
+  z-index: 9;
+  color: var(--coverallWhiteColor);
+  bottom: 10rem;
+  width: 100%; text-align: center;
+}
 
+.dot{
+  padding-inline: 12px;
+}
+.swiper-pagination{
+  margin-bottom: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-inline: 40px;
 }
 
 .swiper-slide {
@@ -358,17 +391,82 @@ a:hover{
   justify-content: center;
 }
 
-
-.courses{
-  overflow: hidden;
+.vps{
   width: 100%;
-  height: 100vh;
-  position: relative;
-  
+  height: 100vh; 
 }
 
-.courses >img{
-  object-fit: cover;
+
+.icp{
+  background-size: cover; background-position: 50% 50%;
+}
+
+.my-bullet {
+  cursor: pointer;
+  text-align: center;
+  font-size: 34px;
+  color: var(--cprimaryColor);
+  
+}
+.my-bullet-active{
+  color: var(--bggColor);
+}
+
+.footer{
+  background-color: var(--footerColor);
+  width: 100%;
+
+  display: flex;
+  overflow:hidden;
+  
+  justify-content: center;
+  gap: 48px;
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  position: relative;
+}
+
+.footer p{
+  color: var(--bggColor);
+  align-self: center;
+  margin:0;
+}
+
+.footer .links{
+  display: flex;
+  gap: 60px;
+}
+.footer img{
+  align-self: center;
+}
+
+.footer-wm{
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  font-size: 10pt; margin-bottom: 20px; color: #CCCCCC;
+}
+
+.footer .images{
+  display: flex;
+  gap: 6px;
+}
+
+
+.vl{
+  background-color: var(--coverallWhiteColor);
+  width:1px;
+}
+
+.patest:hover{
+  transform: scale(1.5) ;
+}
+
+@media(max-width: 1520.98px){
+  .swiper-pagination-label{
+    bottom: 13rem;
+  }
 }
 
 
@@ -399,7 +497,47 @@ a:hover{
 }
 
 
+.description-container{
+  background-color: var(--bggColor); border-radius: 85% 22% 100% 0% / 0% 100% 0% 100%   ;
+}
 
+.description-area{
+  width: 100%; background-color: var(--cprimaryColor); padding: 150px; border-radius: 77% 23% 100% 0% / 0% 100% 0% 100%
+}
+
+.description-text{
+  font-family: 'mulilight';
+            font-size: 18pt; color: var(--coverallWhiteColor);
+}
+
+.patest {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  background-size: cover;
+  transition: all 1s;
+}
+
+.fadein{
+  animation: mymove;
+  animation-duration: 2.0s;
+  visibility: visible !important;
+}
+
+.star {
+  visibility: hidden;
+}
+
+@keyframes mymove {
+  from {top: 40px; opacity:0;}
+  to {top: 0px; opacity:1;}
+}
+
+.my-bullet-mobile{
+  position: absolute; 
+  bottom: 5%;
+  display: none;
+}
 
 
 @media (max-width: 1090.98px) { 
@@ -424,6 +562,34 @@ a:hover{
     font-size: 46pt;
     height: 140px;
   }
+
+  .description-area{
+    border-radius: 0;
+  }
+
+  
+
+  .swiper-pagination-label{
+    font-size: 40pt;
+    bottom: 50%;
+    transform: translateY(50%);
+    padding-top: 90px;
+  }
+
+  .my-bullet{
+    font-size: 30pt;
+  }
+
+  .swiper-pagination{
+    margin-bottom: 2rem;
+    display: none;
+  }
+
+  .my-bullet-mobile{
+    display: block;
+  }
+
+
 }
 
 @media(max-width: 800.98px){
@@ -443,13 +609,29 @@ a:hover{
     font-size: 36pt;
     height: 120px;
   }
+
+  .description-area{
+    padding:100px;
+  }
+  .description-text{
+    font-size: 14pt;
+  }
+
+
+
+ 
 }
+
 
 @media (max-width: 480.98px) {
 
   .img1{
     height: 100%;
     
+  }
+
+  .description-area{
+    padding: 80px;
   }
 
 
@@ -494,5 +676,18 @@ a:hover{
   }
   .textbanner{
     height: 90px;
+  }
+
+  .description-area{
+    padding:60px;
+  }
+
+  .my-bullet{
+    font-size: 22pt;
+  }
+
+  .swiper-pagination-label{
+    font-size: 32pt;
+    padding-top: 60px;
   }
 }

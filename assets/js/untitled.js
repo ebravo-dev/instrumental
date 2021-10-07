@@ -41,6 +41,8 @@ for (let index = 0; index < homeClick.length; index++) {
 //     _closeMenu();
 // }, true);
 
+
+
 window.addEventListener('scroll', function (event) {
     if (window.scrollY > 0) {
         navBar.classList.add('nvs');
@@ -60,6 +62,10 @@ window.addEventListener('scroll', function (event) {
     }
 }, true);
 
+
+
+let bulletNames = ['Ingenería', 'Procuración', 'Construcción', 'Mantenimiento', 'Calibración', 'Capacitación']
+
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     loop: true,
@@ -72,5 +78,37 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        renderBullet: function (index, className) {
+            let prefix = (index > 0) ? "<span class='tpc dot'>●</span>" : "";
+            return '<span class="' + className + '" >' + prefix + bulletNames[index] + "</span>";
+        },
+        bulletClass: 'my-bullet',
+        bulletActiveClass: 'my-bullet-active'
     },
+});
+
+
+
+
+function showImages(el) {
+    var windowHeight = jQuery(window).height();
+    $(el).each(function () {
+        var thisPos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+        if (topOfWindow + windowHeight - 200 > thisPos) {
+            $(this).addClass("fadein");
+        }
+    });
+}
+
+
+// if the image in the window of browser when the page is loaded, show that image
+$(document).ready(function () {
+    showImages('.star');
+});
+
+// if the image in the window of browser when scrolling the page, show that image
+$(window).scroll(function () {
+    showImages('.star');
 });
