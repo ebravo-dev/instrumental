@@ -72,7 +72,7 @@ var swiper = new Swiper(".mySwiper", {
     effect: "fade",
     speed: 1000,
     autoplay: {
-        delay: 1500,
+        delay: 2500,
         disableOnInteraction: false,
     },
     pagination: {
