@@ -5,22 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta name="theme-color" content="#052442">
-    <title>Instrumentación y Control de México</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <title>Instrumentación y Control de México</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="assets/css/untitled.css">
-
-
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
 <body class="bbc">
-
     <div style="width: 100%; position: fixed; top: 0; z-index: 11; ">
 
         <div id="top-bar" class="heap-line " style="width: 100%; "></div>
@@ -30,13 +21,13 @@
                 <img class="nbiconmax pt-3 pb-3 home-click" src="assets/img/logo1.svg" alt="">
 
                 <div class="nbuttons tpc">
-                    <a href="/pages/about/">
+                    <a href="/nosotros">
                         <span class="textb">¿Quiénes somos?</span>
                     </a>
-                    <a href="/pages/services/">
+                    <a href="/#home-services">
                         <span class="textb">Nuestros servicios</span>
                     </a>
-                    <a href="/pages/contact/">
+                    <a href="/contacto">
                         <span class="textb">Contacto</span>
                     </a>
                 </div>
@@ -49,36 +40,17 @@
         </div>
         <main id="cuerpo" class="cuerpo pc dn add-scroll ">
             <ul class="list-group fade-in-image">
-                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/about/">¿Quiénes
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/nosotros">¿Quiénes
                         somos?</a></li>
-                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/services/">Nuestros servicios</a>
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/#home-services"
+                        onclick="menuActionButton()">Nuestros
+                        servicios</a>
                 </li>
-                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/pages/contact/">Contacto</a></li>
+                <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/contacto">Contacto</a></li>
             </ul>
         </main>
     </div>
 
-    <!-- <div
-        style="width: 100%; overflow: hidden; height: 100vh; background-image: url('assets/img/2.jpg'); background-size: cover; background-position: 50% 50%;">
-        <div class="testCurve">
-
-            <div style="width: 100%; overflow: hidden; height: 100vh; 
-            margin-top: -108px;
-                /* clip-path: ellipse(80% 90% at 86% 13%); */
-                border-radius: 100% 0% 36% 64% / 0% 100% 0% 100%  ;
-                margin-left: 120px;
-                ">
-                <div style="background-image: url('assets/img/2.jpg'); background-size: cover; background-position: 50% 50%; width: 100%; overflow: hidden; height: 100vh; 
-                    margin-left: -120px;
-                    ">
-
-                </div>
-            </div>
-
-        </div>
-    </div> -->
-
-    <!-- Swiper -->
     <div class="vps oh" style="position: relative;">
 
         <div class="swiper mySwiper" style="z-index: 8;">
@@ -156,7 +128,7 @@
         </div>
     </div>
 
-    <div class="pc services">
+    <div id="home-services" class="pc services">
         <div class="img1 " onclick="window.location='/';">
             <img src="assets/img/Instrumentacion-industrial.png" alt="" width="101%">
             <div class="tfi">
@@ -394,7 +366,8 @@
         <script src="assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="assets/js/bs-init.js"></script>
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/js/untitled.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/swip.js"></script>
 
 </body>
 

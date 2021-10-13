@@ -6,6 +6,8 @@
   --footerColor: #333333;
   --textColor: #191919;
   --wmColor: #10a1b0;
+  --navLinkActive: #dfdfdf;
+  --navLinkDisable: #dbe0e4;
 }
 
 @font-face {
@@ -36,10 +38,72 @@
 }
 html *{
   font-family: 'muli';
+  
+}
+
+body{
+  background-color: var(--coverallWhiteColor);
+}
+
+.circlepcmark{
+  list-style-type: '●';
+  font-size: 26pt;
+}
+
+.circlepcmark li span{
+  color: var(--textColor);
+  padding-left: 0.3em;
+}
+
+.text-ul>li>span{
+  padding-left: 0.3em;
+}
+
+.text-ul{
+  padding-left: 8%;
+  padding-right: 25%;
+  list-style-type: '●';
+}
+.text-ul ul{
+  color: var(--textColor);
+  list-style-type: none;
+  padding-bottom: 20px;
+  
+}
+
+.capacitaciontext li{
+  list-style-type: '-';
 }
 
 
 
+.text-ul li{
+  padding-bottom: 15px;
+}
+
+
+.checkmark{
+  list-style-type: '✔';
+  
+}
+
+.checkmark li{
+  padding-left: 0.8em;
+}
+
+
+
+.nca{
+  background-color: var(--navLinkActive);
+}
+
+.ncd{
+  background-color: var(--navLinkDisable);
+}
+
+.tbc{
+  color: var(--textColor);
+}
 
 .navbutton{
   display: none;
@@ -425,33 +489,6 @@ a:hover{
   overflow:hidden;
   display: none;
 }
-/*
-.footer p{
-  color: var(--bggColor);
-  align-self: center;
-  margin:0;
-}
-
-.footer .links{
-  display: flex;
-  gap: 60px;
-}
-.footer img{
-  align-self: center;
-}
-
-.footer-wm{
-  position: absolute;
-  bottom: 0;
-  right: 50%;
-  transform: translateX(50%);
-  font-size: 10pt; margin-bottom: 20px; color: #CCCCCC;
-}
-
-.footer .images{
-  display: flex;
-  gap: 6px;
-} */
 
 
 .vl{
@@ -470,6 +507,12 @@ a:hover{
 
 .ncm{
   display: none;
+}
+
+.npcontainer{
+  padding-right: 12%;
+  padding-left: 12%;
+  /* font-size: 15pt; */
 }
 
 .description-container{
@@ -503,6 +546,33 @@ a:hover{
   visibility: hidden;
 }
 
+.vlbanner{
+  width: 5px;
+  min-height: 290px;
+  background-color: var(--coverallWhiteColor);
+}
+
+
+
+.curriculum {
+  background-image: url("../img/Curriculum.jpg");
+  height: 500px; 
+  background-attachment: fixed;
+  background-position:95% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pdfbutton{
+  border: 2px solid var(--coverallWhiteColor);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 250px;
+  padding-left: 250px;
+  margin-left: 10vw;
+}
+
+
 @keyframes mymove {
   from {top: 40px; opacity:0;}
   to {top: 0px; opacity:1;}
@@ -535,6 +605,51 @@ a:hover{
   margin-bottom: 20px;
   font-size: 32pt;
   font-weight: 500;
+}
+
+.banner{
+  width: 100%;
+  height: 100vh;
+  border-radius:100% 0% 30% 0% / 0% 51% 49% 100% ;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.banner-content{
+  position: absolute;
+  bottom: 20%;
+  left: 5%;
+}
+
+.banner-text{
+  font-size: 72pt;
+  font-weight: 900;
+  color: var(--coverallWhiteColor);
+}
+
+.texto-nosotros{
+  padding-left: 12%;
+  padding-right: 12%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  line-height: 1.2em;
+  /* font-size: 18pt; */
+}
+
+.certificados{
+  background-image: url('../img/mapa.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.img-certificados{
+  margin:40px;
+  height: 300px;
+  width: 300px;
+}
+
+.tab-ser{
+  display: block;
 }
 
 @media(max-width: 1520.98px){
@@ -638,6 +753,25 @@ a:hover{
     display: block;
   }
 
+  .vlbanner{
+    min-height: 170px;
+  }
+
+  .banner-text{
+    font-size: 40pt;
+  }
+
+  .curriculum-desktop{
+    display: none;
+  }
+
+  .curriculum-mobile{
+    display: block;
+  }
+
+  .pdfbutton{
+    margin: 0;
+  }
 
 }
 
@@ -678,7 +812,18 @@ a:hover{
     font-size: 20pt;
   }
 
+  .tab-ser{
+    display: none;
+  }
 
+  .tab-services-mobile{
+    display: block;
+  }
+
+  .pdfbutton{
+    padding-right: 120px;
+    padding-left: 120px;
+  }
  
 }
 
@@ -708,6 +853,11 @@ a:hover{
 
   .footerimagem{
     width: 300px;
+  }
+
+  .pdfbutton{
+    padding-right: 30px;
+    padding-left: 30px;
   }
 }
 
@@ -764,4 +914,18 @@ a:hover{
     font-size: 32pt;
     padding-top: 60px;
   }
+
+  .banner-text{
+    font-size: 30pt;
+  }
+
+  .vlbanner{
+    display: none;
+  }
+
+  .img-certificados{
+    width: 200px;
+    height: 200px;
+  }
+  
 }

@@ -30,18 +30,20 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
+function menuActionButton() {
+    if (!menuOpen) {
+        _openMenu();
+    } else {
+        _closeMenu();
+    }
+}
+
 for (let index = 0; index < homeClick.length; index++) {
     homeClick[index].addEventListener('click', () => {
         window.location = '/';
     });
 
 }
-
-// window.addEventListener('resize', function (event) {
-//     _closeMenu();
-// }, true);
-
-
 
 window.addEventListener('scroll', function (event) {
     if (window.scrollY > 0) {
@@ -66,28 +68,6 @@ window.addEventListener('scroll', function (event) {
 
 let bulletNames = ['Ingenería', 'Procuración', 'Construcción', 'Mantenimiento', 'Calibración', 'Capacitación']
 
-var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
-    loop: true,
-    effect: "fade",
-    speed: 1000,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-            let prefix = (index > 0) ? "<span class='tpc dot'>●</span>" : "";
-            return '<span class="' + className + '" >' + prefix + bulletNames[index] + "</span>";
-        },
-        bulletClass: 'my-bullet',
-        bulletActiveClass: 'my-bullet-active'
-    },
-});
-
-
 
 
 function showImages(el) {
@@ -102,13 +82,6 @@ function showImages(el) {
     });
 }
 
-
-// if the image in the window of browser when the page is loaded, show that image
-$(document).ready(function () {
-    showImages('.star');
-});
-
-// if the image in the window of browser when scrolling the page, show that image
-$(window).scroll(function () {
-    showImages('.star');
-});
+function hola() {
+    console.log("yes!");
+}
