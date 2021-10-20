@@ -13,7 +13,7 @@
 <body class="bbc">
     <?php
     include('../templates/navbar.php');
-    $urlImageBanner = '../assets/img/2.jpg';
+    $urlImageBanner = '../assets/img/S-Capacitacion.jpg';
     $labelBanner = 'Capacitación';
     include('../templates/banner.php');
     ?>
@@ -52,6 +52,7 @@
 
     </ul>
 
+    <div style="height: 150px;"></div>
 
     <?php
     include('../templates/footer.php');

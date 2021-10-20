@@ -13,7 +13,7 @@
 <body class="bbc">
     <?php
     include('../templates/navbar.php');
-    $urlImageBanner = '../assets/img/analitica.jpg';
+    $urlImageBanner = '../assets/img/S-Instrumentacion-Analitica.jpg';
     $labelBanner = 'Instrumentación<br>Analítica';
     include('../templates/banner.php');
     ?>

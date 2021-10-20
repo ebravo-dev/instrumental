@@ -6,8 +6,8 @@
   --footerColor: #333333;
   --textColor: #191919;
   --wmColor: #10a1b0;
-  --navLinkActive: #dfdfdf;
-  --navLinkDisable: #dbe0e4;
+  --navLinkActive: #d6d6d6;
+  --navLinkDisable: #dfdfdf;
 }
 
 @font-face {
@@ -44,6 +44,45 @@ html *{
 body{
   background-color: var(--coverallWhiteColor);
 }
+
+.myinput{
+  background-color: #191919;
+  outline: none;
+  border:none;
+  border-bottom: 1px solid #dfdfdf;
+  padding-bottom: 7px;
+  
+}
+
+.myarea{
+  background-color: #191919;
+  outline: none;
+  border:none;
+  border: 1px solid #dfdfdf;
+  padding: 7px;
+}
+
+.mysubmit{
+  appearance: none;
+  border: none;
+  background-color: var(--coverallWhiteColor);
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'mulilight';
+}
+
+input::placeholder {
+  color: var(--coverallWhiteColor);
+  opacity: 1;
+}
+
+textarea::placeholder{
+  color: var(--coverallWhiteColor);
+  opacity: 1;
+}
+
 
 .circlepcmark{
   list-style-type: '●';
@@ -685,6 +724,7 @@ a:hover{
 
 
 @media (max-width: 1090.98px) { 
+  
   .navbutton{
     display: block;
   }
@@ -771,6 +811,13 @@ a:hover{
 
   .pdfbutton{
     margin: 0;
+  }
+
+  .form-desktop{
+    display: none;
+  }
+  .form-mobile{
+    display: block;
   }
 
 }

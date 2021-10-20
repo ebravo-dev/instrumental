@@ -13,8 +13,8 @@
                 <img src="../assets/img/ICM Fb.svg" alt="" height="80px">
                 <img src="../assets/img/ICM In.svg" alt="" height="80px">
                 <img src="../assets/img/ICM Wp.svg" alt="" height="80px">
-                <img src="../assets/img/ICM Fb.svg" alt="" height="80px">
-                <img src="../assets/img/ICM In.svg" alt="" height="80px">
+                <img src="../assets/img/ICONO TEL.svg" alt="" height="80px">
+                <img src="../assets/img/ICONO MAIL.svg" alt="" height="80px">
 
             </div>
         </div>

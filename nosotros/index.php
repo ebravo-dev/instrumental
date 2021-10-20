@@ -13,7 +13,7 @@
 <body class="bcc">
     <?php
     include('../templates/navbar.php');
-    $urlImageBanner = '../assets/img/S-Instrumentacion Industrial.jpg';
+    $urlImageBanner = '../assets/img/Quienes Somos.jpg';
     $labelBanner = '¿Quienes somos?';
     include('../templates/banner.php');
     ?>
@@ -38,13 +38,13 @@
     <div class="tab-ser oh">
         <div class="d-flex flex-column justify-content-evenly oh nca" style="width: 100%;  ">
             <div class="row text-center oh mb-5">
-                <div id="n1" onclick="activarn1()" class="col nca">
+                <div id="n1" onclick="activarn1()" class="col nca" style="cursor:pointer;">
                     <span class="fs-1 fw-bold">Ingeniería</span>
                 </div>
-                <div id="n2" onclick="activarn2()" class="col ncd">
+                <div id="n2" onclick="activarn2()" class="col ncd" style="cursor:pointer;">
                     <span class="fs-1 fw-bold">Procuración</span>
                 </div>
-                <div id="n3" onclick="activarn3()" class="col ncd">
+                <div id="n3" onclick="activarn3()" class="col ncd" style="cursor:pointer;">
                     <span class="fs-1 fw-bold">Construcción</span>
                 </div>
             </div>
@@ -69,18 +69,32 @@
                     </ul>
                 </div>
                 <div class="npcontainer fs-4">
-                    <p id="np2" class="dn fadein " style="position: relative;animation-duration: 0.5s;">
-                        Engarrotar Engarzador Abajar Descerrar Incorporeidad Increado Descensión Incorporal Basural. Gemiqueo Descentralización Bateador Generala Ficticio Abadí Incorruptible Abajadero Batazo Incorporo. Descerebrar Bástulo Bastonada Batanero General Geminar Engargolado Fidelísimo. Géminis Basurero Descensión Bateador Cendradilla Gémino. Generación Engarro Increíble Bastonear Cendrazo.
-                    </p>
+                    <ul id="np2" class="dn fadein checkmark" style="position: relative; animation-duration: 0.5s; ">
+                        <li>Lista de Materiales</li>
+                        <li>Planeación de Procura</li>
+                        <li>Evaluación de Vendedores</li>
+                        <li>Control & Valuación de Activos</li>
+                        <li>Procuración & Expeditación</li>
+                        <li>Liberación de Envíos/Aduanas</li>
+                        <li>Administración & Manejo de Almacenes</li>
+                        <li>Sustitución de Importaciones</li>
+                        <li>Recepción</li>
+                        <li>Maniobras</li>
+                        <li>Almacenamiento & Preservación</li>
+                    </ul>
                 </div>
                 <div class="npcontainer fs-4">
-                    <p id="np3" class="dn fadein " style="position: relative;animation-duration: 0.5s;">
-                        Engarbarse Engargante Incorregiblemente. Abada Batallona Engargolar Batalán Cenceño Batallar. Batallador Incorporal Descentralizador Abajar Incruentamente.
-
-                        Gemólogo Gemonias Descerrajado Cendradilla Generación Ficoideo Incrasar. Abadiado Descercar Descerrar Cendrado Gemir Cendrado. Cencerreo Descifrador Cencerrillas Descercar Engargolar. Descifre Cenagoso Descerrajadura Bastoncillo Generable Abadía Increpación. Descentrar Descenso Descerezar. Descentralización Gemiquear Batanear Ceñar Gemólogo Incorrupto Generador Abadernar Batallador.
-
-                        Abajamiento Descerebrar Incorporo Genearca Gemoso Incredulidad Abacería Incorrecto Descensión Incrementar. Batanero Cencerrada Bastonada Cenceño Increíblemente Descercado Batallón Incrédulo Batalloso Abacalero. Abaco Céndea Descimbrar Incristalizable Incredulidad Descerebrado Descerrajadura Incorpóreo Cencido Incorpóreo.
-                    </p>
+                    <ul id="np3" class="dn fadein checkmark" style="position: relative; animation-duration: 0.5s; ">
+                        <li>Cronograma de Proyecto</li>
+                        <li>Administración de Proyecto</li>
+                        <li>Ingeniería de Costo</li>
+                        <li>Ejecución de Proyecto</li>
+                        <li>Aseguramiento de Calidad Constructiva</li>
+                        <li>Cumplimiento y Homologación de Regulaciones Extranjeras y Domesticas Salud Ocupacional</li>
+                        <li>Seguridad y Medio Ambiente</li>
+                        <li>Relaciones con Industria</li>
+                        <li>Sindicatos y Gobierno Procedimientos y Documentación Técnica</li>
+                    </ul>
                 </div>
             </div>
         </div>

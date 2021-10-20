@@ -13,7 +13,7 @@
 <body class="bbc">
     <?php
     include('../templates/navbar.php');
-    $urlImageBanner = '../assets/img/Quienes Somos.jpg';
+    $urlImageBanner = '../assets/img/S-Instrumentacion Industrial.jpg';
     $labelBanner = 'Instrumentación<br>Industrial';
     include('../templates/banner.php');
     ?>
