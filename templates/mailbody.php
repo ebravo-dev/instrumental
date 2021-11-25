@@ -35,15 +35,15 @@ $msgbody = '<!DOCTYPE html>
                         </td>
                     </tr>
                     <tr>
-                        <td align="center" style="padding:60px 0 20px 0;background:#d6d6d6;">
-                            <img src="https://i.pravatar.cc/120?img=3" alt="" height="120px"><br>
+                        <td align="center" style="padding:60px 0 20px 0;background:#EEEEEE;">
+                            <img src="https://ederjgb94.github.io/instrumental/assets/img/ICM-LOGO-WEB.png" alt="" height="120px"><br>
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding:36px 60px 42px 60px; background-color: #d6d6d6;">
+                        <td style="padding:36px 60px 42px 60px; background-color: #EEEEEE;">
                             <table role="presentation" style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                 <tr>
-                                    <td style="padding:0 0 36px 0;color:#153643;">
+                                    <td style="padding:0 0 36px 0;color:#000000;">
                                         <h1 style="font-size:18pt;margin:0 0 8px 0;font-family:Arial,sans-serif;">
                                             Nombre</h1>
                                         <p style="margin:0 0 12px 0;

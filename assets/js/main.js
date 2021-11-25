@@ -7,6 +7,12 @@ const navBar = document.getElementById('nav-bar');
 const topBar = document.getElementById('top-bar');
 const textsBar = document.getElementsByClassName('textb');
 let menuOpen = false;
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+function closeMenu() {
+    console.log('si');
+}
 
 function _openMenu() {
     menuBtn.classList.add('open');
@@ -50,17 +56,17 @@ window.addEventListener('scroll', function (event) {
         navBar.classList.add('nvs');
         topBar.style.height = '0px';
 
-        for (let i = 0; i < textsBar.length; i++) {
-            textsBar[i].style.height = '80px';
-            textsBar[i].style.fontSize = '16pt';
-        }
+        // for (let i = 0; i < textsBar.length; i++) {
+        //     textsBar[i].style.height = '80px';
+        //     textsBar[i].style.fontSize = '16pt';
+        // }
     } else {
         navBar.classList.remove('nvs');
         topBar.style.height = '8px';
-        for (let i = 0; i < textsBar.length; i++) {
-            textsBar[i].style.height = '100px';
-            textsBar[i].style.fontSize = '18pt';
-        }
+        // for (let i = 0; i < textsBar.length; i++) {
+        //     textsBar[i].style.height = '100px';
+        //     textsBar[i].style.fontSize = '18pt';
+        // }
     }
 }, true);
 
@@ -84,4 +90,8 @@ function showImages(el) {
 
 function hola() {
     console.log("yes!");
+}
+
+function openPdf() {
+    window.open('../assets/pdf/instrumentacion-y-control-de-mexico.pdf', '_blank').focus();
 }

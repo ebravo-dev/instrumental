@@ -1,36 +1,37 @@
-<div style="width: 100%; position: fixed; top: 0; z-index: 11; ">
+<nav id="nav-bar" class="navbar textb fixed-top ">
+    <div id="top-bar" class="heap-line " style="width: 100vw; position:absolute; top:0;"></div>
+    <div class="container-fluid " style="padding: 0 0 0 40px !important;">
 
-    <div id="top-bar" class="heap-line " style="width: 100%; "></div>
-    <div style="display: flex; ">
-        <div id="nav-bar" class="nv ps-2 pe-2">
-            <img class="nbiconmin home-click" src="../assets/img/ICM ICONO.svg" alt="">
-            <img class="nbiconmax pt-3 pb-3 home-click" src="../assets/img/logo1.svg" alt="">
+        <img class="nbiconmin home-click" src="../assets/img/instrumentacion_control_ICM ICONO.svg" alt="">
+        <img class="nbiconmax home-click" src="../assets/img/instrumentacion_control_logo1.svg" alt="">
 
-            <div class="nbuttons tpc">
-                <a href="/nosotros">
-                    <span class="textb">¿Quiénes somos?</span>
-                </a>
-                <a href="/#home-services">
-                    <span class="textb">Nuestros servicios</span>
+        <div class="d-flex ">
+            <div class="nbuttons tpc ">
+                <a href="/servicios">
+                    <span class="textb">Servicios</span>
                 </a>
                 <a href="/contacto">
                     <span class="textb">Contacto</span>
                 </a>
             </div>
-        </div>
-        <div class="pc navbutton">
-            <div class="menu-btn ">
-                <div class="menu-btn__burger"></div>
+            <div class="pc navbutton">
+                <div class="menu-btn ">
+                    <div class="menu-btn__burger"></div>
+                </div>
             </div>
         </div>
     </div>
     <main id="cuerpo" class="cuerpo pc dn add-scroll ">
         <ul class="list-group fade-in-image">
-            <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/nosotros">¿Quiénes
-                    somos?</a></li>
-            <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/#home-services">Nuestros servicios</a>
-            </li>
-            <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/contacto">Contacto</a></li>
+            <!-- <li class="list-group-item pc border-0 p-4 fs-2 twc"><a href="/nosotros">¿Quiénes
+            somos?</a></li> -->
+            <a href="/servicios">
+                <li onclick="_closeMenu()" class="list-group-item pc border-0 p-4 fs-2 twc">Servicios
+                </li>
+            </a>
+            <a href="/contacto">
+                <li class="list-group-item pc border-0 p-4 fs-2 twc">Contacto</li>
+            </a>
         </ul>
     </main>
-</div>
+</nav>

@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:wght@300&display=swap');
+
 :root {
   --cprimaryColor: #113f6c;
   --cnavbarColor: rgba(204,204,204,0.8);
   --bggColor: #CCCCCC;
-  --coverallWhiteColor: #f2f2f2;
+  --coverallWhiteColor: #fff;
   --footerColor: #333333;
   --textColor: #191919;
   --wmColor: #10a1b0;
@@ -10,7 +12,8 @@
   --navLinkDisable: #dfdfdf;
 }
 
-@font-face {
+
+/* @font-face {
   font-family: 'muli';
   src: url('../fonts/muli/Muli.ttf') format('truetype');
   font-weight: normal;
@@ -29,7 +32,9 @@
   src: url('../fonts/muli/Muli-Bold.ttf') format('truetype');
   font-weight: normal;
   font-size: normal;
-}
+} */
+
+
 
 .carousel-indicators > button {
   border-radius: 50%;
@@ -37,7 +42,7 @@
   height: 15px !important;
 }
 html *{
-  font-family: 'muli';
+  font-family: 'Open Sans';
   
 }
 
@@ -70,7 +75,7 @@ body{
   padding-left: 10%;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'mulilight';
+  /* font-family: 'mulilight'; */
 }
 
 input::placeholder {
@@ -94,35 +99,44 @@ textarea::placeholder{
   padding-left: 0.3em;
 }
 
-.text-ul>li>span{
-  padding-left: 0.3em;
+
+.verticalimg{
+  display: none;
+
+  width: 100%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100 - 55px) ;
 }
 
 .text-ul{
-  padding-left: 8%;
-  padding-right: 25%;
-  list-style-type: '●';
-}
-.text-ul ul{
-  color: var(--textColor);
-  list-style-type: none;
-  padding-bottom: 20px;
-  
+  /* margin-left: 4% ; */
 }
 
-.capacitaciontext li{
-  list-style-type: '-';
+
+.capacitaciontext
+{
+  list-style: none;
+}
+
+.capacitaciontext li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--cprimaryColor); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  
 }
 
 
 
 .text-ul li{
   padding-bottom: 15px;
+  
 }
 
 
 .checkmark{
-  list-style-type: '✔';
+  list-style-type: "\2022";
   
 }
 
@@ -144,6 +158,11 @@ textarea::placeholder{
   color: var(--textColor);
 }
 
+.alianzaicon{
+  -webkit-transition: background-image 2s ease-out;
+  transition: background-image 2s ease-out;
+}
+
 .navbutton{
   display: none;
 }
@@ -155,8 +174,9 @@ textarea::placeholder{
 }
 
 .swiper-pagination-label{
-  font-family: 'mulibold'; font-weight: 900;
-  font-size: 72pt;
+  /* font-family: 'mulibold';  */
+  font-weight: 900;
+  /* font-size: 60pt; */
   position: absolute;
   z-index: 9;
   color: var(--coverallWhiteColor);
@@ -168,7 +188,7 @@ textarea::placeholder{
   padding-inline: 12px;
 }
 .swiper-pagination{
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -178,21 +198,7 @@ textarea::placeholder{
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+  background: #d6d6d6;
 }
 
 .swiper-slide img {
@@ -203,15 +209,18 @@ textarea::placeholder{
 }
 
 .nbuttons span{
-  padding-left: 3rem;
-  padding-right: 3rem;
-  display:table-cell;
-  vertical-align: middle;
-  height: 100px;
-  /* background-color: red; */
+  padding-left: 5rem;
+  padding-right: 5rem;
+  /* display:table-cell; */
+  /* vertical-align: middle; */
+  /* height: 100px; */
   font-weight: 600;
   font-size: 18pt;
 
+}
+
+.home-click{
+  cursor: pointer;
 }
 
 .nbuttons{
@@ -223,6 +232,11 @@ textarea::placeholder{
 .nbiconmin{
   display: none;
   cursor: pointer;
+  height: 80px;
+}
+
+.nbiconmax{
+  height: 60px;
 }
 
 .nbiconmax:hover{
@@ -351,8 +365,9 @@ a:hover{
 }
 
 .navbar {
+  background-color: var(--cnavbarColor);
   padding: 0px;
-  
+  height: 80px;
 }
 
 #cuerpo {
@@ -386,7 +401,7 @@ a:hover{
   justify-content: center;
   align-items: center;
   width: 160px;
-  height: 90px;
+  height: 80px;
   cursor: pointer;
   transition: all .15s ease-in-out;
 }
@@ -452,10 +467,10 @@ a:hover{
   top:50%;
   transform: translateY(-50%);
   
-  font-size: 26pt;
+  /* font-size: 26pt; */
   color: var(--coverallWhiteColor);
-  padding-left: 24px;
-  padding-right: 24px;
+  /* padding-left: 24px;
+  padding-right: 24px; */
   font-weight: 600;
   display: flex;
   width: 100%;
@@ -475,10 +490,21 @@ a:hover{
   cursor: pointer;
   
 }
+
+.menu-services{
+  /* height: 100vh; */
+  padding-top:80px; padding-bottom:35px;
+}
+
+.menu-services .row{
+  /* height: 50%; */
+}
 .img1 img {
     transition: transform .5s;
     transition: 0.5s;
-    
+    object-fit: cover;
+    width: 100%;
+  height: 100%;
     
 }
 .img1:hover > img{
@@ -497,7 +523,8 @@ a:hover{
 
 .vps{
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 
@@ -513,7 +540,7 @@ a:hover{
   
 }
 .my-bullet-active{
-  color: var(--bggColor);
+  color: var(--coverallWhiteColor);
 }
 
  .footer{
@@ -539,6 +566,10 @@ a:hover{
   transform: scale(1.5) ;
 }
 
+.patest2:hover{
+  transform: scale(1.2) ;
+}
+
 .nc{
   padding-left: 5%;
   padding-right: 3%;
@@ -555,21 +586,62 @@ a:hover{
 }
 
 .description-container{
-  background-color: var(--bggColor); border-radius: 85% 22% 100% 0% / 0% 100% 0% 100%   ;
+  background-color: #E5E5E5; 
+  border-radius: 0% 100% 23% 95% / 100% 0% 100% 0%;
 }
 
 .description-area{
-  width: 100%; background-color: var(--cprimaryColor); padding: 150px; border-radius: 77% 23% 100% 0% / 0% 100% 0% 100%
+  width: 100%; 
+  background-color: var(--cprimaryColor); 
+  padding: 80px;
+  border-radius: 0% 100% 20% 80% / 100% 0% 100% 0%;
+}
+
+.description-container2{
+  background-color: #E5E5E5; 
+  border-radius: 23% 95% 0% 100%  / 100% 0% 100% 0%;
+}
+
+.description-area2{
+  width: 100%; 
+  background-color: var(--coverallWhiteColor); 
+
+  padding: 80px;
+  border-radius: 20% 80% 0% 100% / 100% 0% 100% 0%;
+  background-image: url('../img/sistema_de_gestion_instrumentacion_control_Industrial-13-13.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position:100% 102%;
+  /* background-color: red; */
+}
+
+.description-area3{
+  width: 100%; 
+  background-color: #E5E5E5; 
+
+  padding-right: 80px;
+  padding-left: 80px;
 }
 
 .description-text{
-  font-family: 'mulilight';
-            font-size: 18pt; color: var(--coverallWhiteColor);
+  /* font-family: 'mulilight'; */
+  text-align: justify;
+  text-justify: inter-word;
+  font-weight: 300;
+  /* padding-left: 100px;
+  padding-right: 100px; */
+  /* font-size: 18pt; */
 }
 
 .patest {
   width: 150px;
   height: 150px;
+  position: relative;
+  background-size: cover;
+  transition: all 1s;
+}
+
+.patest2 {
   position: relative;
   background-size: cover;
   transition: all 1s;
@@ -586,29 +658,35 @@ a:hover{
 }
 
 .vlbanner{
-  width: 5px;
-  min-height: 290px;
+  width: 2px;
+  min-height: 240px;
   background-color: var(--coverallWhiteColor);
 }
 
 
 
 .curriculum {
-  background-image: url("../img/Curriculum.jpg");
-  height: 500px; 
+  background-image: url("../img/instrumentacion-y-control-de-mexico-curriculum.webp");
+  /* height: 500px;  */
   background-attachment: fixed;
-  background-position:95% 50%;
+  background-position:95% 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-left: 130px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  align-items: center;
+  /* will-change: transform;  */
 }
 
 .pdfbutton{
   border: 2px solid var(--coverallWhiteColor);
-  padding-top: 40px;
+  
+  /* padding-top: 40px;
   padding-bottom: 40px;
   padding-right: 250px;
   padding-left: 250px;
-  margin-left: 10vw;
+  margin-left: 10vw; */
 }
 
 
@@ -620,12 +698,12 @@ a:hover{
 .my-bullet-mobile{
   position: absolute; 
   bottom: 5%;
-  display: none;
+  /* display: none; */
 }
 
 .ncmh{
   font-size: 40pt;
-  font-family: 'mulibold';
+  /* font-family: 'mulibold'; */
   font-weight: 900;
   color: var(--cprimaryColor);
   width:fit-content;
@@ -647,11 +725,14 @@ a:hover{
 }
 
 .banner{
-  width: 100%;
-  height: 100vh;
+  /* width: 100%;
+  height: 100vh; */
   border-radius:100% 0% 30% 0% / 0% 51% 49% 100% ;
   background-size: cover;
   background-position: 50% 50%;
+
+
+  /* height: calc(var(--vh, 1vh) * 100); */
 }
 
 .banner-content{
@@ -661,7 +742,7 @@ a:hover{
 }
 
 .banner-text{
-  font-size: 72pt;
+  /* font-size: 72pt; */
   font-weight: 900;
   color: var(--coverallWhiteColor);
 }
@@ -700,16 +781,18 @@ a:hover{
 
 @media(max-width: 1200.98px){
   
-  .img1>img{
+  /* .img1>img{
     object-fit: cover;
     width: 100%;
     height: 100vh;
-  }
+  } */
   .services{
     flex-direction: column;
   }
 
-  .img1:hover > img{
+  
+
+  /* .img1:hover > img{
     -ms-transform: none;
     -webkit-transform: none; 
     transform: none;
@@ -718,13 +801,17 @@ a:hover{
   }
   .img1:hover > .tfi{
     padding-bottom: 0px;
-  }
+  } */
 }
 
 
 
-@media (max-width: 1090.98px) { 
+@media (max-width: 991px) { 
   
+
+  .banner{
+    border-radius: 0;
+  }
   .navbutton{
     display: block;
   }
@@ -737,6 +824,12 @@ a:hover{
   .nv{
     height: 90px ;
   }
+  /* .navbar{
+    height: 80px;
+  }
+  .nbiconmax{
+    height: 80px;
+  } */
   .textbanner{
     height: 140px;
     width: 600px;
@@ -749,12 +842,22 @@ a:hover{
 
   .description-area{
     border-radius: 0;
+    padding: 0;
+  }
+
+  .description-area2{
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .description-area3{
+    padding: 0;
   }
 
   
 
   .swiper-pagination-label{
-    font-size: 40pt;
+    /* font-size: 26pt; */
     bottom: 50%;
     transform: translateY(50%);
     padding-top: 90px;
@@ -797,17 +900,19 @@ a:hover{
     min-height: 170px;
   }
 
-  .banner-text{
+  /* .banner-text{
     font-size: 40pt;
-  }
+  } */
 
-  .curriculum-desktop{
+
+
+  /* .curriculum-desktop{
     display: none;
   }
 
   .curriculum-mobile{
     display: block;
-  }
+  } */
 
   .pdfbutton{
     margin: 0;
@@ -816,11 +921,24 @@ a:hover{
   .form-desktop{
     display: none;
   }
+
   .form-mobile{
     display: block;
   }
 
+  .curriculum{
+    padding-left: 0px;
+    background-attachment: scroll;
+  background-position: none;
+  background-repeat: no-repeat;
+  background-size: none;
+  width: 100%;
+  height: 100%;
 }
+
+
+}
+
 
 @media(max-width: 800.98px){
   .textbanner
@@ -840,12 +958,12 @@ a:hover{
     height: 120px;
   }
 
-  .description-area{
+  /* .description-area{
     padding:100px;
-  }
-  .description-text{
+  } */
+  /* .description-text{
     font-size: 14pt;
-  }
+  } */
 
   .ncmh{
     font-size: 24pt;
@@ -867,24 +985,53 @@ a:hover{
     display: block;
   }
 
-  .pdfbutton{
+  /* .pdfbutton{
     padding-right: 120px;
     padding-left: 120px;
-  }
+  } */
  
+}
+
+
+
+@media (max-width: 575px) {
+  .verticalimg{
+    display: block;
+  }
+  .horizontalimg{
+    display: none;
+  }
+  .menu-services{
+    height: auto !important;
+
+    /* padding:0; */
+  }
+  .menu-services .row .abcc{
+    height: 100vh !important;
+  }
+
+  .text-ul{
+    padding:15px;
+  }
+
+  /* .menu-services .row div{
+    height: 100vh !important;
+  } */
+
+  
 }
 
 
 @media (max-width: 480.98px) {
 
-  .img1{
+  /* .img1{
     height: 100%;
     
-  }
+  } */
 
-  .description-area{
+  /* .description-area{
     padding: 80px;
-  }
+  } */
 
   .ncmh{
     font-size: 20pt;
@@ -902,13 +1049,13 @@ a:hover{
     width: 300px;
   }
 
-  .pdfbutton{
+  /* .pdfbutton{
     padding-right: 30px;
     padding-left: 30px;
-  }
+  } */
 }
 
-@media (max-width: 402.98px) { 
+@media (max-width: 430.98px) { 
   .nbiconmax{
     display: none;
   }
@@ -920,8 +1067,12 @@ a:hover{
     height: 60px;
   }
 
+  .navbar{
+    height: 80px;
+  }
+
   .menu-btn{
-    height: 60px;
+    height: 80px;
     width: 100px;
   }
 
@@ -949,22 +1100,22 @@ a:hover{
     height: 90px;
   }
 
-  .description-area{
+  /* .description-area{
     padding:60px;
-  }
+  } */
 
   .my-bullet{
     font-size: 22pt;
   }
 
   .swiper-pagination-label{
-    font-size: 32pt;
+    /* font-size: 20pt; */
     padding-top: 60px;
   }
 
-  .banner-text{
+  /* .banner-text{
     font-size: 30pt;
-  }
+  } */
 
   .vlbanner{
     display: none;

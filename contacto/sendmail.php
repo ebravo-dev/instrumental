@@ -8,6 +8,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+/** [COMPROBAR SEGURIDAD] */
 $contacto_nombre = $_POST['nombre'];
 $contacto_correo = $_POST['correo'];
 $contacto_negocio = $_POST['negocio'];
@@ -25,31 +26,26 @@ $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls';
 $mail->Host = 'smtp.gmail.com';
 $mail->Port = "587";
+
+/** [PASAR A .ENV] */
 $mail->Username = 'mailertestcl@gmail.com';
 $mail->Password = '1qaz"WSX3edc';
-// $mail->FromName = 'Walalaaaaa';
 $mail->AddAddress('ederjgb94@gmail.com');
 $mail->Subject = 'Instrumental Mensaje';
 $mail->header = '"Content-Type: text/html; charset=UTF-8\r\n"';
 $mail->Body = $msgbody;
 $mail->AltBody = $msgbody;
-// $mail->Body = "Nombre: $contacto_nombre
-// Correo: $contacto_correo
-// Compañía: $contacto_negocio
-// Número Celular: $contacto_celular
-// Mensaje: $contacto_mensaje";
-// $mail->addAttachment('pdf/Salida.pdf');
 
 if ($mail->Send()) {
-    echo '<script type="text/javascript">
-           alert("Enviado Correctamente");
-        </script>';
+    // echo '<script type="text/javascript">
+    //        alert("Enviado Correctamente");
+    //     </script>';
 } else {
-    echo '<script type="text/javascript">
-           alert("NO ENVIADO, intentar de nuevo");
-        </script>';
+    // echo '<script type="text/javascript">
+    //        alert("NO ENVIADO, intentar de nuevo");
+    //     </script>';
 }
 
 $mail->smtpClose();
 
-// header('Location: /');
+header('Location: /');
